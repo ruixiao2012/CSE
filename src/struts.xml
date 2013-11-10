@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- Add packages here -->
+	<package name="account" namespace="/" extends="struts-default">
+		<action name="loginForward" class="com.ncepu.action.account.LoginAction"
+			method="loginForward">
+			<result name="success">/account/login.jsp</result>
+		</action>
+		<action name="login" class="com.ncepu.action.account.LoginAction"
+			method="login">
+			<result name="success">/account/welcome.jsp</result>
+			<result name="login">/account/login.jsp</result>
+		</action>
+	</package>
+</struts>
